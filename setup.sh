@@ -1,6 +1,6 @@
 pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
 cd src/rlvr
-pip install -e ".[dev]" --trusted-host pypi.devops.xiaohongshu.com
+pip install -e ".[dev]"
 
 # Addtional modules
 pip install wandb==0.18.3

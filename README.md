@@ -13,8 +13,8 @@ The Hi-Guard framework consists of a cascaded moderation pipeline with two stage
 1. **Binary Guard**: Filters out safe content using lightweight classification.
 2. **Hierarchical Guard**: Performs policy-aligned risk path generation on potentially risky content.
 
-<p align="left">
-  <img src="assets/hi-guard-architecture.png" alt="Hi-Guard Framework" width="700"/>
+<p align="center">
+  <img src="assets/hi-guard-architecture.png" alt="Hi-Guard Framework" width="800"/>
 </p>
 
 ## 🔍 Highlights
