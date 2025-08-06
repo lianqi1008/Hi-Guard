@@ -43,6 +43,7 @@ The Hi-Guard framework consists of a cascaded moderation pipeline with two stage
 
 ```
 Hi-Guard/
+├── assets/
 ├── src/
 │   ├── rlvr/                # Stage2: RLVR + GRPO logic
 │   ├── sft/                 # Stage1: Supervised fine-tuning 
