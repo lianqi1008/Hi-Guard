@@ -5,14 +5,15 @@
 Shanghai Jiao Tong University · Xiaohongshu Inc. · Huazhong University of Science and Technology
 </p>
 
----
+<!-- --- -->
 
 This repository contains the official implementation of **Hi-Guard**, a cascaded multimodal large language model (MLLM) framework designed to improve classification accuracy, interpretability, and policy alignment in real-world content moderation.
+
 
 **📄 Paper**: [https://arxiv.org/pdf/2508.03296](https://arxiv.org/pdf/2508.03296)  
 <!-- **📬 Contact**: Anqi Li (anqi.li@sjtu.edu.cn) -->
 
-<!-- --- -->
+---
 ## 🧱 Framework Overview
 
 The Hi-Guard framework consists of a cascaded moderation pipeline with two stages:
@@ -40,7 +41,6 @@ Hi-Guard/
 ├── src/
 │   ├── rlvr/                # Stage2: RLVR + GRPO logic
 │   ├── sft/                 # Stage1: Supervised fine-tuning 
-│   ├── scripts/             # Launch scripts
 ├── setup1.sh                # Environment setup for stage1
 ├── setup2.sh                # Environment setup for stage2
 └── README.md
