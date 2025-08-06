@@ -15,7 +15,7 @@ MODEL_NAME_OR_PATH="$Qwen2-VL-2B-Instruct"
 LORA_RANK=64
 LORA_ALPHA=16
 LORA_DROPOUT=0.05
-DEEPSPEED=../configs/deepspeed/ds_z3_config.json
+DEEPSPEED=src/sft/configs/deepspeed/ds_z3_config.json
 
 # Dataset
 DATASET='risk'  # dataset名字，用于在dataset_info.json登记
@@ -36,14 +36,14 @@ FLASH_ATTN=fa2
 ENABLE_LIGER_KERNEL=true
 
 # Output
-OUTPUT_ROOT='./checkpoint'
+OUTPUT_ROOT='checkpoint'
 OUTPUT_DIR=${OUTPUT_ROOT}/saves/${EXPERIMENT_TOPIC}/${EXPERIMENT_TOPIC}_${MODEL_TYPE}_bs${PER_DEVICE_TRAIN_BATCH_SIZE}*${GRADIENT_ACCUMULATION_STEPS}_${NUM_TRAIN_EPOCHS}epoch_${EXPERIMENT_NOTES}
 SAVE_STEPS=200
 SAVE_TOTAL_LIMIT=20
 
 
 ######################## 生成本次训练使用的yaml文件 ########################
-python ../utils/yaml_generator.py \
+python src/sft/utils/yaml_generator.py \
           --model_name_or_path=${MODEL_NAME_OR_PATH} \
           --lora_rank=${LORA_RANK} \
           --lora_alpha=${LORA_ALPHA} \
@@ -68,10 +68,10 @@ python ../utils/yaml_generator.py \
           
 
 ######################## 根据当前数据集在dataset_info.json中登记本次数据集 ########################
-python ../utils/dataset_info_generator.py \
+python src/sft/utils/dataset_info_generator.py \
           --dataset=${DATASET} \
           --dataset_file_path=${DATASET_FILE_PATH}
 
 
 ######################## 完成所有准备，启动训练 ########################
-CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 FORCE_TORCHRUN=1 llamafactory-cli train train/qwen2vl_lora_sft_trainUsed.yaml
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 FORCE_TORCHRUN=1 llamafactory-cli train src/sft/train/qwen2vl_lora_sft_trainUsed.yaml

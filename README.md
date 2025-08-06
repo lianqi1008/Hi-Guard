@@ -38,10 +38,11 @@ The Hi-Guard framework consists of a cascaded moderation pipeline with two stage
 ```
 Hi-Guard/
 ├── src/
-│   ├── rlvr/                # RLVR + GRPO logic
-│   ├── sft/                 # Supervised fine-tuning: 
+│   ├── rlvr/                # Stage2: RLVR + GRPO logic
+│   ├── sft/                 # Stage1: Supervised fine-tuning 
 │   ├── scripts/             # Launch scripts
-├── setup.sh                 # Environment setup
+├── setup1.sh                # Environment setup for stage1
+├── setup2.sh                # Environment setup for stage2
 └── README.md
 ```
 ---
@@ -58,16 +59,18 @@ sh setup.sh
 
 ## 🚀 Quick Start
 
-Install dependencies via:
+Stage 1: Binary Classification (Safe vs. Risky)
 
 ```bash
-sh setup.sh
+sh setup1.sh
+sh src/sft/train/2B_Binary-Guard.sh
 ```
 
-Run Hi-Guard training:
+Stage 2: Hierarchical Risk Path Prediction
 
 ```bash
-sh src/scripts/7B_Hi-Guard.sh
+sh setup2.sh
+sh src/rlvr/train/7B_Hi-Guard.sh
 ```
 
 ---
@@ -96,7 +99,7 @@ Hi-Guard uses a two-stage dataset from real-world moderation traffic:
 | Stage | Task                  | #Samples | Risky:Safe Ratio |
 |-------|-----------------------|----------|------------------|
 | 1     | Binary Classification | 38k      | ~1:4             |
-| 2     | Hierarchical Labeling | 41k      | ~1:1             |
+| 2     | Hierarchical Classification | 41k      | ~1:1             |
 
 Only Stage 1 risky samples proceed to Stage 2 classification.
 

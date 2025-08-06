@@ -36,7 +36,7 @@ logger = logging.getLogger(__name__)
 from datasets import load_dataset, load_from_disk, Dataset, DatasetDict
 from transformers import Qwen2VLForConditionalGeneration
 
-from open_r1.trainer import Qwen2VLGRPOTrainer, Qwen2VLGRPOVLLMTrainer
+from trainer import Qwen2VLGRPOTrainer, Qwen2VLGRPOVLLMTrainer
 from trl import GRPOConfig, GRPOTrainer, ModelConfig, ScriptArguments, TrlParser, get_peft_config
 import numpy as np
 import re
