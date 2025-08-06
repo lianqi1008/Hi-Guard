@@ -2,7 +2,7 @@
 
 This repository contains the official implementation of **Hi-Guard**, a cascaded multimodal large language model (MLLM) framework designed to improve classification accuracy, interpretability, and policy alignment in real-world content moderation.
 
-**📄 Paper**: [(Coming Soon)]()  
+**📄 Paper**: [https://arxiv.org/pdf/2508.03296](https://arxiv.org/pdf/2508.03296)  
 <!-- **📬 Contact**: Anqi Li (anqi.li@sjtu.edu.cn) -->
 
 ---
@@ -15,7 +15,7 @@ The Hi-Guard framework consists of a cascaded moderation pipeline with two stage
 
 <p align="center">
   <img src="assets/hi-guard-architecture.png" alt="Hi-Guard Framework" width="800"/>
-</p>
+</p> 
 
 ## 🔍 Highlights
 
