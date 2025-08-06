@@ -1,11 +1,13 @@
 # Hi-Guard: Towards Trustworthy Multimodal Moderation via Policy-Aligned Reasoning and Hierarchical Labeling
 
 <p align="center">
-<b>Anqi Li, Wenwei Jin, Jintao Tong, Pengda Qin, Weijia Li, Guo Lu</b><br>
-Shanghai Jiao Tong University · Xiaohongshu Inc. · Huazhong University of Science and Technology
+  <b>
+    <a href="https://github.com/lianqi1008">Anqi Li</a>, Wenwei Jin, Jintao Tong, Pengda Qin, Weijia Li, Guo Lu
+  </b><br>
+  Shanghai Jiao Tong University · Xiaohongshu Inc. · Huazhong University of Science and Technology
 </p>
-
 <!-- --- -->
+
 
 This repository contains the official implementation of **Hi-Guard**, a cascaded multimodal large language model (MLLM) framework designed to improve classification accuracy, interpretability, and policy alignment in real-world content moderation.
 
