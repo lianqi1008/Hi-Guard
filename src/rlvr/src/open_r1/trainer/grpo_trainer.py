@@ -60,6 +60,7 @@ class AsyncLogger:
         self.worker_thread.start()
     
     def _log_worker(self):
+        os.makedirs(os.path.dirname(self.log_path), exist_ok=True)
         with open(self.log_path, "a", encoding="utf-8") as f:
             while not self.stop_event.is_set():
                 try:

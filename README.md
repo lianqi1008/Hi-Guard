@@ -1,5 +1,12 @@
 # Hi-Guard: Towards Trustworthy Multimodal Moderation via Policy-Aligned Reasoning and Hierarchical Labeling
 
+<p align="center">
+<b>Anqi Li, Wenwei Jin, Jintao Tong, Pengda Qin, Weijia Li, Guo Lu</b><br>
+Shanghai Jiao Tong University · Xiaohongshu Inc. · Huazhong University of Science and Technology
+</p>
+
+---
+
 This repository contains the official implementation of **Hi-Guard**, a cascaded multimodal large language model (MLLM) framework designed to improve classification accuracy, interpretability, and policy alignment in real-world content moderation.
 
 **📄 Paper**: [https://arxiv.org/pdf/2508.03296](https://arxiv.org/pdf/2508.03296)  
@@ -31,13 +38,12 @@ The Hi-Guard framework consists of a cascaded moderation pipeline with two stage
 ```
 Hi-Guard/
 ├── src/
-│   ├── rlvr/                # Core training and GRPO code
-│   │   └── src/open_r1/     # Hi-Guard implementation
+│   ├── rlvr/                # RLVR + GRPO logic
+│   ├── sft/                 # Supervised fine-tuning: 
 │   ├── scripts/             # Launch scripts
 ├── setup.sh                 # Environment setup
 └── README.md
 ```
-
 ---
 
 <!-- ## ⚙️ Setup

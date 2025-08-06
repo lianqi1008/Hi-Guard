@@ -15,8 +15,8 @@
 import os
 import sys
 # parent directory path of trainer
-# sys.path.insert(0, '/mnt/tidal-alsh01/usr/lianqi4/Hi-Guard/src/rlvr/src')
-# print(os.getcwd())
+sys.path.insert(0, '/mnt/tidal-alsh01/usr/lianqi4/Hi-Guard/src/rlvr/src')
+print(os.getcwd())
 import re
 from datetime import datetime
 from dataclasses import dataclass, field

@@ -1,0 +1,13 @@
+{
+  "alpaca_en": {
+    "hf_hub_url": "llamafactory/alpaca_en"
+  },
+  "glaive_toolcall_en": {
+    "hf_hub_url": "llamafactory/glaive_toolcall_en",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "conversations",
+      "tools": "tools"
+    }
+  }
+}
