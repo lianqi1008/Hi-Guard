@@ -12,7 +12,7 @@ This repository contains the official implementation of **Hi-Guard**, a cascaded
 **📄 Paper**: [https://arxiv.org/pdf/2508.03296](https://arxiv.org/pdf/2508.03296)  
 <!-- **📬 Contact**: Anqi Li (anqi.li@sjtu.edu.cn) -->
 
----
+<!-- --- -->
 ## 🧱 Framework Overview
 
 The Hi-Guard framework consists of a cascaded moderation pipeline with two stages:
