@@ -51,9 +51,6 @@ from trl.trainer.grpo_config import GRPOConfig
 from trl.trainer.utils import generate_model_card, get_comet_experiment_url
 
 
-# import sys
-# sys.path.append('/mnt/tidal-alsh01/usr/lianqi4/Hierarchical-RFT')
-
 class AsyncLogger:
     def __init__(self, log_path):
         self.log_path = log_path
@@ -237,9 +234,7 @@ class Qwen2VLGRPOTrainer(Trainer):
                 )
 
         if peft_config is not None:
-            print(peft_config)
             model = get_peft_model(model, peft_config)
-            print(model)
 
         if peft_config is None:
             if is_deepspeed_zero3_enabled():
@@ -267,7 +262,7 @@ class Qwen2VLGRPOTrainer(Trainer):
                 if "Qwen" in model_id or "Qwen2.5-VL" in model_id:
                     processing_class.image_processor.max_pixels = max_pixels
                     processing_class.image_processor.min_pixels = min_pixels
-                print(f'max_pixels:{max_pixels} min_pixels:{min_pixels}')
+                # print(f'max_pixels:{max_pixels} min_pixels:{min_pixels}')
             else:
                 processing_class = AutoTokenizer.from_pretrained(model.config._name_or_path, padding_side="left")
                 pad_token_id = processing_class.pad_token_id
@@ -311,7 +306,6 @@ class Qwen2VLGRPOTrainer(Trainer):
         self.max_prompt_length = args.max_prompt_length
         self.max_completion_length = args.max_completion_length  # = |o_i| in the GRPO paper
         self.num_generations = args.num_generations  # = G in the GRPO paper
-        print("num_generations",self.num_generations)
         self.generation_config = GenerationConfig(
             max_new_tokens=self.max_completion_length,
             do_sample=True,  

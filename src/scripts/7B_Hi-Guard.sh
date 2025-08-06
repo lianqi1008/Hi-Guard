@@ -1,11 +1,11 @@
 export DEBUG_MODE="true"
 export LOG_PATH="./debug/7B_Hi-Guard.txt"
 
-export DATA_FILE_PATH=/mnt/tidal-alsh01/usr/lianqi4/Hierarchical-RFT/dataset/0704/Train/white4k/merged.json
-export CKPT_PATH=/mnt/tidal-alsh01/usr/lianqi4/llm_riskcontentcheck/checkpoint/saves/7B_4level_exp3_SFT_init_0709/7B_4level_exp3_SFT_init_0709_qwen2-vl-7b_bs4*2_1epoch_lora_white4k/Qwen2-VL_merged
+export DATA_FILE_PATH=$json_path
+export CKPT_PATH=$Qwen2-VL-7B-Instruct
 export SAVE_PATH=./share_models/7B_Hi-Guard/
 
-torchrun --nproc_per_node="1" \
+torchrun --nproc_per_node="8" \
     --nnodes="1" \
     --node_rank="0" \
     --master_addr="127.0.0.1" \

@@ -14,7 +14,8 @@
 
 import os
 import sys
-# sys.path.insert(0, '/mnt/tidal-alsh01/usr/lianqi4/Hierarchical-RFT/src/virft/src')
+# parent directory path of trainer
+# sys.path.insert(0, '/mnt/tidal-alsh01/usr/lianqi4/Hi-Guard/src/rlvr/src')
 # print(os.getcwd())
 import re
 from datetime import datetime
@@ -40,10 +41,8 @@ from trl import GRPOConfig, GRPOTrainer, ModelConfig, ScriptArguments, TrlParser
 import numpy as np
 import re
 
-# 替换为你的 API 密钥
+# Replace with your API key
 # wandb.login(key="")
-
-# ✅ 工具函数
 
 def clean_text(text):
     return text.strip().replace(' ', '').replace('_', '').lower() if text else ""
@@ -76,23 +75,9 @@ def soft_margin_penalty(pred_label, true_label, label2idx, dist_matrix):
         return 0.5
     return 0.0
 
-def extract_keywords(definition):
-    keywords = re.findall(r'\b\w{2,}\b', definition.lower())
-    return list(set(keywords))[:5]
-
-def cot_relevance_reward(think_str, label_definition):
-    keywords = extract_keywords(label_definition)
-    matched = [kw for kw in keywords if kw in think_str.lower()]
-    return min(1.0, len(matched) / max(1, len(keywords)))
-
-def repetition_penalty(think_str, label_definition):
-    overlap = set(think_str.lower().split()) & set(label_definition.lower().split())
-    return 1.0 if len(overlap) / max(1, len(label_definition.split())) > 0.8 else 0.0
-
 
 CATEGORY_PATHS = [
-    "level1-level2-level3-level4",
-    "..."
+    "level1-level2-level3-level4"
 ]
 
 # Four-level label structure
@@ -313,7 +298,7 @@ def main(script_args, training_args, model_args):
     dataset = dataset.map(make_conversation_image) 
 
     trainer_cls = Qwen2VLGRPOTrainer if not training_args.use_vllm else Qwen2VLGRPOVLLMTrainer
-    print("using: ", trainer_cls)
+    # print("using: ", trainer_cls)
 
 
     # Initialize the GRPO trainer
