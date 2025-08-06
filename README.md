@@ -2,10 +2,13 @@
 
 <p align="center">
   <b>
-    <a href="https://github.com/lianqi1008">Anqi Li</a>, Wenwei Jin, Jintao Tong, Pengda Qin, Weijia Li, Guo Lu
+    Anqi Li<sup>1</sup>, Wenwei Jin<sup>2</sup>, Jintao Tong<sup>2</sup>, Pengda Qin<sup>1</sup>, Weijia Li<sup>3</sup>, Guo Lu<sup>1</sup>
   </b><br>
-  Shanghai Jiao Tong University · Xiaohongshu Inc. · Huazhong University of Science and Technology
+  <sup>1</sup>Shanghai Jiao Tong University &nbsp;&nbsp;
+  <sup>2</sup>Xiaohongshu Inc. &nbsp;&nbsp;
+  <sup>3</sup>Huazhong University of Science and Technology
 </p>
+
 <!-- --- -->
 
 
