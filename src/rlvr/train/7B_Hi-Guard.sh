@@ -3,7 +3,7 @@ export LOG_PATH="./debug/7B_Hi-Guard.txt"
 
 export DATA_FILE_PATH=$json_path
 export CKPT_PATH=$Qwen2-VL-7B-Instruct
-export SAVE_PATH=./share_models/7B_Hi-Guard/
+export SAVE_PATH=./checkpoint/7B_Hi-Guard/
 
 torchrun --nproc_per_node="8" \
     --nnodes="1" \

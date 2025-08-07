@@ -18,7 +18,7 @@ lr_scheduler_type: cosine
 max_samples: 2000000
 model_name_or_path: $Qwen2-VL-7B-Instruct_path
 num_train_epochs: 1.0
-output_dir: ./checkpoint/saves/binary_classification_qwen2-vl-2b_bs64*1_1epoch_lora_2B
+output_dir: ./checkpoint/2B_Binary-Guard/binary_classification_qwen2-vl-2b_bs64*1_1epoch_lora_2B
 overwrite_cache: true
 overwrite_output_dir: true
 per_device_train_batch_size: 4

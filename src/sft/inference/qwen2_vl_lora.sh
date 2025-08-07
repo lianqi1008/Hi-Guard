@@ -1,7 +1,7 @@
 export CUDA_VISIBLE_DEVICES="0,1,2,3,4,5,6,7"
 TRAIN_STEP=500
 MODEL_DIR='$Qwen2-VL-2B-Instruct'
-LORA_ADAPTOR_DIR='./checkpoint/saves/checkpoint-'${TRAIN_STEP}''
+LORA_ADAPTOR_DIR='./checkpoint/2B_Binary-Guard/checkpoint-'${TRAIN_STEP}''
 EXPERIMENT_NOTES='binary_classification'
 DATA_ROOT_DIR='$data_path'
 INFER_FILE_NAME='merged'

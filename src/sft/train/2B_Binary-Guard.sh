@@ -15,7 +15,7 @@ MODEL_NAME_OR_PATH="$Qwen2-VL-2B-Instruct"
 LORA_RANK=64
 LORA_ALPHA=16
 LORA_DROPOUT=0.05
-DEEPSPEED=src/sft/configs/deepspeed/ds_z3_config.json
+DEEPSPEED=src/2B_Binary-Guard/configs/deepspeed/ds_z3_config.json
 
 # Dataset
 DATASET='risk'  # dataset名字，用于在dataset_info.json登记

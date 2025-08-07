@@ -151,7 +151,7 @@ class RewardCalculator:
                     pred_answer = clean_text(pred_match.group(1))
                     true_answer = clean_text(sol_match.group(1))
                     if true_answer=='无风险' or pred_answer=='无风险':
-                        base_acc = 1.0 if pred_answer == true_answer else -0.5
+                        base_acc = 1.0 if pred_answer == true_answer else -1.25
                         total_reward = base_acc
                     else:
                         pred_answers = pred_answer.split('-')
