@@ -4,7 +4,7 @@ MODEL_DIR='$Qwen2-VL-2B-Instruct'
 LORA_ADAPTOR_DIR='./checkpoint/2B_Binary-Guard/checkpoint-'${TRAIN_STEP}''
 EXPERIMENT_NOTES='binary_classification'
 DATA_ROOT_DIR='$data_path'
-INFER_FILE_NAME='merged'
+INFER_FILE_NAME='data'
 INFER_FILE_TYPE='.jsonl'
 
 MAX_NEW_TOKENS=1024
