@@ -135,18 +135,16 @@ Structured predictions are formatted as:
 
 ---
 
-<!-- ## 📌 Citation
+## 📌 Citation
 
 ```bibtex
-@inproceedings{li2026hi-guard,
+@article{li2025towards,
   title={Towards Trustworthy Multimodal Moderation via Policy-Aligned Reasoning and Hierarchical Labeling},
   author={Li, Anqi and Jin, Wenwei and Tong, Jintao and Qin, Pengda and Li, Weijia and Lu, Guo},
-  booktitle={Proceedings of the 2026 ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD)},
-  year={2026}
+  journal={arXiv preprint arXiv:2508.03296},
+  year={2025}
 }
 ```
-
---- -->
 
 ## 📝 License
 
