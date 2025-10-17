@@ -1,13 +1,43 @@
 {
-  "alpaca_en": {
-    "hf_hub_url": "llamafactory/alpaca_en"
-  },
-  "glaive_toolcall_en": {
-    "hf_hub_url": "llamafactory/glaive_toolcall_en",
-    "formatting": "sharegpt",
-    "columns": {
-      "messages": "conversations",
-      "tools": "tools"
+    "alpaca_en": {
+        "hf_hub_url": "llamafactory/alpaca_en"
+    },
+    "glaive_toolcall_en": {
+        "hf_hub_url": "llamafactory/glaive_toolcall_en",
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "tools": "tools"
+        }
+    },
+    "qwen2-vl-contentRisk-base": {
+        "file_name": "$jsonl_path",
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "images": "images"
+        },
+        "tags": {
+            "system_tag": "system",
+            "role_tag": "from",
+            "content_tag": "value",
+            "user_tag": "human",
+            "assistant_tag": "gpt"
+        }
+    },
+    "risk": {
+        "file_name": "$jsonl_path",
+        "formatting": "sharegpt",
+        "columns": {
+            "messages": "conversations",
+            "images": "images"
+        },
+        "tags": {
+            "system_tag": "system",
+            "role_tag": "from",
+            "content_tag": "value",
+            "user_tag": "human",
+            "assistant_tag": "gpt"
+        }
     }
-  }
 }
