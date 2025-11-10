@@ -148,4 +148,4 @@ Structured predictions are formatted as:
 
 ## 📝 License
 
-For research purposes only. Please contact the authors for commercial licensing or dataset access.
+For research purposes only.
