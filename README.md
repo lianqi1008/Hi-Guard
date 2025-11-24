@@ -1,4 +1,4 @@
-<h1 align="center">Hi-Guard: Towards Trustworthy Multimodal Moderation via Policy-Aligned Reasoning and Hierarchical Labeling</h1>
+<h1 align="center">Hi-Guard: Towards Trustworthy Multimodal Moderation via Policy-Aligned Reasoning and Hierarchical Labeling (KDD 2026)</h1>
 
 <p align="center">
   <b>
