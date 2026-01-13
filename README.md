@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>
-    Anqi Li<sup>1</sup>, Wenwei Jin<sup>2</sup>, Jintao Tong<sup>3</sup>, Pengda Qin<sup>2</sup>, Weijia Li<sup>2</sup>, Guo Lu<sup>1</sup>
+    Anqi Li<sup>1</sup>, Wenwei Jin<sup>2</sup>, Jintao Tong<sup>3</sup>, Pengda Qin<sup>2</sup>, Jiawei Li<sup>2</sup>, Guo Lu<sup>1</sup>
   </b><br>
   <sup>1</sup>Shanghai Jiao Tong University &nbsp;&nbsp;
   <sup>2</sup>Xiaohongshu Inc. &nbsp;&nbsp;
