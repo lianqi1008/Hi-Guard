@@ -148,4 +148,4 @@ Structured predictions are formatted as:
 
 ## 📝 License
 
-For research purposes only.
+Apache-2.0 license.
